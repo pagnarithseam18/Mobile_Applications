@@ -5,34 +5,47 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:background="#BE80FF">
 
 
     <EditText
-            android:layout_width="200dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_centerInParent="true"
             android:layout_above="@id/password"
-            android:text="Username"
-            android:id="@+id/username"/>
+            android:hint="Username"
+            android:textColorHint="#FFF"
+            android:id="@+id/username" android:textColor="#FFFFFF"
+            android:backgroundTint="@android:color/background_light"/>
 
 
     <EditText
-            android:layout_width="200dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_centerInParent="true"
+            android:textColorHint="#fff"
+            android:hint="Password"
+            android:id="@+id/password" android:textColor="#FFFFFF" android:shadowColor="#00FFFFFF"
+            android:backgroundTint="@android:color/background_light"/>
 
-            android:text="Password"
-            android:id="@+id/password"/>
-    
-    <Button android:layout_width="150dp"
+    <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/password"
-            android:text="Sign In"
-    android:id="@+id/signin"/>
-    
-    <Button android:layout_width="" android:layout_height=""
-            android:text="Reset"
-            android:id="@+id/reset"/>
+            android:id="@+id/space"/>
 
+    <Button android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/space"
+            android:text="Sign In"
+            android:id="@+id/signin"
+            android:layout_centerInParent="true" android:background="#7B4FBE" android:textColor="#FFFFFF"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Reset?"
+              android:textSize="15dp"
+              android:textColor="#fff"
+              android:layout_alignParentBottom="true"
+              android:layout_centerInParent="true"/>
 </RelativeLayout>
